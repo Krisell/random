@@ -1,6 +1,6 @@
-# XHR browser request wrapper
+# Generate random data – Not for cryptographic purpose
 
 # Installation
-```npm install @krisell/rawxhr```
+```npm install @krisell/random```
 
 # How to use
