@@ -7,7 +7,7 @@ const Random = {
       return Array(number).fill(0).map(el => Math.floor(Math.random() * 10)).join('')
     },
 
-    randomString(length = 20) {
+    randomString (length = 20) {
       let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
       return Array(length)
