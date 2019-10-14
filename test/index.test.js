@@ -49,7 +49,7 @@ test('a ten number interval returns all "evenly"', () => {
         let randomNumber = Random.integerBetween(MIN, MAX)
         occurences[randomNumber] = (occurences[randomNumber] || 0) + 1
     }
-    
+
     let sum = 0
     for (let i = MIN; i <= MAX; ++i) {
         expect(occurences[i]).toBeGreaterThan(0)
@@ -77,4 +77,14 @@ test('Random string gives correct length', () => {
         let string = Random.randomString(10)
         expect(string.length).toBe(10)
     }
+})
+
+describe('Length of random string', () => {
+    test('should default to 20', () => {
+        expect(Random.randomString().length).toBe(20)
+    })
+
+    test('should be overwritten to another length', () => {
+        expect(Random.randomString(30).length).toBe(30)
+    })
 })

@@ -7,13 +7,14 @@ const Random = {
       return Array(number).fill(0).map(el => Math.floor(Math.random() * 10)).join('')
     },
 
-    randomString (length) {
-       let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    randomString(length) {
+      let stringLength = length || 20 // Default length
+      let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-       return Array(length)
-         .fill(0)
-         .map(el => el = possible.charAt(Math.floor(Math.random() * possible.length)))
-         .join('')
+      return Array(stringLength)
+        .fill(0)
+        .map(el => el = possible.charAt(Math.floor(Math.random() * possible.length)))
+        .join('')
     }
 }
 
